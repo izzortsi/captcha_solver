@@ -33,6 +33,6 @@ NUM_CROSSES = [2, 3]
 NUM_LINES = [3, 5]
 
 FONT_SIZE = 23
-FONT = "Arial.ttf"
+FONT = "ArialMedium.ttf"
 
 BG_COLOR = (255, 255, 126)

@@ -13,7 +13,14 @@ from PIL import Image, ImageDraw, ImageFont
 # %%
 from captcha_settings import *
 # %%
-
+print(len(os.sys.argv))
+if len(os.sys.argv) > 2:
+    if os.sys.argv[2] == "a":
+        pass
+    elif os.sys.argv[2] == "ab":
+        FONT = "ArimoBold.ttf"
+    elif os.sys.argv[2] == "am":
+        FONT = "ArialMedium.ttf"
 # fonte usada (bistream vera)
 font = ImageFont.truetype(FONT, size=FONT_SIZE)
 
@@ -111,8 +118,8 @@ def gen_captcha(text):
     image = deform_image(image)
     bg = Image.new('RGBA', (IMAGE_WIDTH, IMAGE_HEIGHT), color=BG_COLOR)
     
-    image = image.crop(image.getbbox())  # Calculates the bounding box of the non-zero regions in the image
-    image = image.rotate(random.uniform(-10, 10), Image.Resampling.BICUBIC, expand=0)
+    # image = image.crop(image.getbbox())  # Calculates the bounding box of the non-zero regions in the image
+    # image = image.rotate(random.uniform(-10, 10), Image.Resampling.BICUBIC, expand=0)
     
     image = image.rotate(random.randint(-10, 10), resample=Image.Resampling.BICUBIC)
     image = Image.alpha_composite(bg, image)
@@ -128,7 +135,7 @@ def gen_string(size=4, chars=ALL_CHAR_SET):
     return ''.join(random.choice(chars) for _ in range(size))
 
 if len(sys.argv) == 1:
-    print("ha")
+    print("pass the number of samples you want to generate as an argument")
 else:
     num = int(sys.argv[1])
     print(f"Gerando {num} captchas")
