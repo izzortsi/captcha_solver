@@ -29,7 +29,7 @@ PREDICT_DATASET_PATH = 'dataset' + os.path.sep + 'predict' + os.path.sep + "imgs
 
 TRAIN_DATASET_LABELS = 'dataset' + os.path.sep + 'train'+ os.path.sep + "labels"
 TEST_DATASET_LABELS = 'dataset' + os.path.sep + 'test'+ os.path.sep + "labels"
-PREDICT_DATASET_LABELS = 'dataset' + os.path.sep + 'predict'+ os.path.sep + "labels"
+PREDICT_DATASET_LABELS = 'dataset' + os.path.sep + 'predict' + os.path.sep + "predicted_labels"
 
 # RAW_DATASET_PATH = 'dataset' + os.path.sep + 'raw'
 

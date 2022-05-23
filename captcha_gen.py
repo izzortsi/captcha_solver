@@ -162,10 +162,13 @@ else:
         os.makedirs(TEST_DATASET_PATH)
     if not os.path.exists(PREDICT_DATASET_PATH):
         os.makedirs(PREDICT_DATASET_PATH)                        
+    if not os.path.exists(PREDICT_DATASET_LABELS):
+        os.makedirs(PREDICT_DATASET_LABELS)    
     if not os.path.exists(TRAIN_DATASET_LABELS):
         os.makedirs(TRAIN_DATASET_LABELS)    
     if not os.path.exists(TEST_DATASET_LABELS):
         os.makedirs(TEST_DATASET_LABELS)
+        
             
     for i in range(num):
         if i % 10 == 0:

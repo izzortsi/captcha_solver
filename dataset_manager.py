@@ -57,9 +57,10 @@ class CustomImageDataset(Dataset):
             return image, label
         else:
             img_path = os.path.join(self.img_dir, self.img_list[idx])
+            image = Image.open(img_path)
             if self.transform:
                 image = self.transform(image)
-            return image, None
+            return image, img_path
     
 transform = transforms.Compose([
     # transforms.ColorJitter(),
@@ -81,11 +82,20 @@ def get_predict_data_loader():
     return DataLoader(dataset, batch_size=1, shuffle=True)
 #%%
 
-# train_dl = get_train_data_loader()
-# dlds = train_dl.dataset
+train_dl = get_train_data_loader()
+dlds = train_dl.dataset
+#%%
+dlds.img_labels
+#%%
 # test_dl = get_test_data_loader()
 # dlds = test_dl.dataset
-
+predict_dl = get_predict_data_loader()
+#%%
+dlds = predict_dl.dataset.img_list
+#%%
+dlds
+# %%
+dlds
 # %%
 # len(dlds)
 #%%
