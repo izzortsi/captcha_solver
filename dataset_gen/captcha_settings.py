@@ -26,13 +26,13 @@ IMAGE_WIDTH = 81
 TRAIN_DATASET_PATH = 'dataset' + os.path.sep + 'train'
 TEST_DATASET_PATH = 'dataset' + os.path.sep + 'test'
 PREDICT_DATASET_PATH = 'dataset' + os.path.sep + 'predict'
-RAW_DATASET_PATH = ".." + os.path.sep + 'dataset' + os.path.sep + 'raw'
+RAW_DATASET_PATH = 'dataset' + os.path.sep + 'raw'
 
 # %%
 NUM_CROSSES = [2, 3]
 NUM_LINES = [3, 5]
 
 FONT_SIZE = 23
-FONT = "ArialMedium.ttf"
+FONT = "ArimoBold.ttf"
 
 BG_COLOR = (255, 255, 126)

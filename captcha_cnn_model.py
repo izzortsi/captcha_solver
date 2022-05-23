@@ -1,6 +1,6 @@
 # -*- coding: UTF-8 -*-
 import torch.nn as nn
-import dataset_gen.captcha_settings as cs
+from captcha_settings import *
 
 # CNN Model (2 conv layer)
 class CNN(nn.Module):
@@ -25,11 +25,11 @@ class CNN(nn.Module):
             nn.ReLU(),
             nn.MaxPool2d(2))
         self.fc = nn.Sequential(
-            nn.Linear((cs.IMAGE_WIDTH//8)*(cs.IMAGE_HEIGHT//8)*64, 1024),
+            nn.Linear((IMAGE_WIDTH//8)*(IMAGE_HEIGHT//8)*64, 1024),
             nn.Dropout(0.5),  # drop 50% of the neuron
             nn.ReLU())
         self.rfc = nn.Sequential(
-            nn.Linear(1024, cs.MAX_CAPTCHA*cs.ALL_CHAR_SET_LEN),
+            nn.Linear(1024, MAX_CAPTCHA*ALL_CHAR_SET_LEN),
         )
 
     def forward(self, x):
