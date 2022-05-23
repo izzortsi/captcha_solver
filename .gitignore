@@ -1,5 +1,5 @@
 .history
 .vscode
 __pycache__
-dataset/*
-dataset/*/*
+dataset/*/*/*/*.png
+dataset/**/*.png
