@@ -1,3 +1,4 @@
 {
-    "python.defaultInterpreterPath": "C:\\Users\\igor-\\Dropbox\\PC\\.venv\\captcha_solver\\Scripts\\python.exe"
+    "python.defaultInterpreterPath": "C:\\Users\\igor-\\Dropbox\\PC\\.venv\\captcha_solver\\Scripts\\python.exe",
+    "git.ignoreLimitWarning": true
 }
